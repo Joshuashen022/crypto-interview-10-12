@@ -6,6 +6,8 @@ use num::{BigInt, BigUint};
 use point::Point;
 
 fn main() {
+    // First
+    println!("First");
     let p = BigUint::parse_bytes(
         b"115792089237316195423570985008687907853269984665640564039457584007908834671663",
         10,
@@ -19,8 +21,12 @@ fn main() {
         10,
     );
     let res = a.unwrap().modpow(&b.unwrap(), &p.unwrap());
-    println!("{}", res);
+    println!("a ^ b mod p = {}", res);
+    println!();
+    println!();
 
+    // Second
+    println!("Second");
     let p1_x = BigInt::parse_bytes(
         b"36034668029310999675425029227919426304128362788024891102120850317866231552679",
         10,
@@ -54,8 +60,18 @@ fn main() {
     );
     let mul_result = p1.mul(k.unwrap());
     println!("p1 * k = {:?}", mul_result);
+    println!();
+    println!();
 
+    // Third
+    println!("Third");
     pbkdf2_cipher::test();
+
+    println!();
+    println!();
+
+    // Forth
+    println!("Forth");
     let array = vec![1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let k = 10;
     let res = base_algorithm::algorithm_test1(array, k);
@@ -65,12 +81,14 @@ fn main() {
         sum += p.sum();
     }
     println!("Minimum sum is {:?}", sum);
+    println!();
+    println!();
 
+    // Fifth
+    println!("Fifth");
     let sss = String::from("|**|**|*");
     let starts = vec![-1];
     let ends = vec![2, 3];
     let sum = base_algorithm::algorithm_test2(sss, starts, ends);
-    for c in sum {
-        println!("{:?}", c)
-    }
+    println!("{:?}", sum)
 }
