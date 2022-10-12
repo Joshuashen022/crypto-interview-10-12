@@ -1,5 +1,5 @@
 use core::ops::{Add, Mul};
-use num::{BigInt, Integer};
+use num::BigInt;
 
 #[derive(Debug, Clone)]
 pub struct Point {

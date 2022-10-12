@@ -57,6 +57,7 @@ pub fn algorithm_test1(full_array: Vec<u32>, k: u32) -> Vec<Plan> {
 }
 
 #[derive(Debug, Copy, Clone)]
+#[allow(dead_code)]
 pub struct CargoWall {
     start: isize,
     end: isize,
@@ -70,7 +71,7 @@ impl CargoWall {
 }
 
 pub fn algorithm_test2(cargos: String, starts: Vec<isize>, ends: Vec<isize>) -> Vec<CargoWall> {
-    let mut sum = 0;
+
     let mut result: Vec<CargoWall> = Vec::new();
     for start in starts {
         for end in ends.clone() {

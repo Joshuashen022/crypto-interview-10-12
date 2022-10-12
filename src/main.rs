@@ -2,11 +2,6 @@ mod base_algorithm;
 mod pbkdf2_cipher;
 mod point;
 
-use base_algorithm::Plan;
-use k256::{
-    elliptic_curve::{generic_array::arr, group::ff::PrimeField, ops::LinearCombination},
-    ProjectivePoint, Scalar,
-};
 use num::{BigInt, BigUint};
 use point::Point;
 
